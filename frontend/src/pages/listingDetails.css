@@ -1,0 +1,105 @@
+/* Image Styling */
+.listing-image {
+    border-radius: 1.5rem;
+    height: auto;
+    max-height: 350px;
+}
+
+@media (max-width: 576px) {
+    .listing-image {
+        max-height: 300px;
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .listing-image {
+        max-height: 350px;
+    }
+}
+
+/* Star Rating */
+.star-input-group {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.star-input-group i {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.star-input-group i:hover {
+    transform: scale(1.1);
+}
+
+.star-rating {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.star-rating i {
+    font-size: 1rem;
+}
+
+/* Review Card Styling */
+.review-comment {
+    color: #6c757d;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.delete-review-btn {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem;
+}
+
+/* Map Container */
+.map-container {
+    min-height: 400px !important;
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    .map-container {
+        min-height: 450px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .map-container {
+        min-height: 400px;
+        width: 100%;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+}
+
+@media (min-width: 992px) {
+    .map-container {
+        min-height: 600px;
+        width: 100%;
+    }
+}
+
+/* Card Shadows */
+.card {
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive spacing */
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1rem !important;
+    }
+    
+    h2, h3, h4 {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,36 @@
+.footer-section {
+  background: #f8f6f1;
+  color: #1f2937;
+}
+
+.footer-brand-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  /* background: linear-gradient(135deg, #ff5a5f, #ff7a59); */
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(255, 90, 95, 0.2);
+}
+
+.footer-social-link {
+  width: 2.35rem;
+  height: 2.35rem;
+  background: #fff;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-social-link:hover {
+  color: #ff5a5f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.footer-link {
+  color: #4b5563;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #ff5a5f;
+}

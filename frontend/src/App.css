@@ -1,0 +1,10 @@
+#root {
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+main{
+    flex: 1 !important;
+}
+  

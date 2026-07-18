@@ -1,0 +1,315 @@
+/* ========================================
+   WISHLIST PAGE STYLING
+   ======================================== */
+
+/* Main container for wishlist page */
+.wishlist-container {
+    min-height: calc(100vh - 200px);
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================================
+   EMPTY STATE STYLING
+   ======================================== */
+
+/* Empty wishlist specific styling */
+.wishlist-container.empty-wishlist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 200px);
+    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+}
+
+/* Wrapper for empty state content */
+.empty-state-wrapper {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Heart icon styling */
+.heart-icon-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart-icon {
+    font-size: 5rem;
+    color: #ff385c;
+    animation: heartBeat 1.2s ease-in-out infinite;
+    filter: drop-shadow(0 4px 12px rgba(255, 56, 92, 0.2));
+}
+
+/* Heading for empty state */
+.empty-state-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+/* Subheading for empty state */
+.empty-state-subheading {
+    font-size: 1.1rem;
+    color: #717171;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+/* Browse Listings Button */
+.browse-btn {
+    padding: 0.875rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #ff385c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(255, 56, 92, 0.3);
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+
+.browse-btn:hover {
+    background-color: #e63355;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 56, 92, 0.4);
+}
+
+.browse-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(255, 56, 92, 0.3);
+}
+
+.browse-btn:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(255, 56, 92, 0.3), 0 0 0 3px rgba(255, 56, 92, 0.1);
+}
+
+/* ========================================
+   WISHLIST WITH ITEMS STYLING
+   ======================================== */
+
+/* Content wrapper for wishlist with items */
+.wishlist-content {
+    width: 100%;
+    max-width: 1400px;
+    padding: 1rem;
+}
+
+/* Wishlist title */
+.wishlist-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heartbeat animation for icon */
+@keyframes heartBeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    10%,
+    30% {
+        transform: scale(0.9);
+    }
+    20%,
+    50%,
+    80% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.1);
+    }
+    60% {
+        transform: scale(1.05);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet devices (768px to 1024px) */
+@media (max-width: 1024px) {
+    .empty-state-wrapper {
+        max-width: 450px;
+        padding: 1.5rem;
+    }
+
+    .empty-state-heading {
+        font-size: 2rem;
+    }
+
+    .empty-state-subheading {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .heart-icon {
+        font-size: 4rem;
+    }
+
+    .browse-btn {
+        padding: 0.75rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    .wishlist-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Mobile devices (480px to 768px) */
+@media (max-width: 768px) {
+    .wishlist-container {
+        padding: 1.5rem 1rem;
+        min-height: calc(100vh - 180px);
+    }
+
+    .empty-state-wrapper {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .empty-state-heading {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .empty-state-subheading {
+        font-size: 0.95rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .heart-icon {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .heart-icon-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .browse-btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .wishlist-content {
+        padding: 0.5rem;
+    }
+
+    .wishlist-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .wishlist-container {
+        padding: 1rem;
+        min-height: calc(100vh - 160px);
+    }
+
+    .empty-state-wrapper {
+        padding: 0.5rem;
+    }
+
+    .empty-state-heading {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .empty-state-subheading {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .heart-icon {
+        font-size: 3rem;
+    }
+
+    .heart-icon-container {
+        margin-bottom: 1.25rem;
+    }
+
+    .browse-btn {
+        width: 100%;
+        padding: 0.7rem 1.25rem;
+        font-size: 0.85rem;
+        border-radius: 6px;
+    }
+
+    .browse-btn:hover {
+        transform: translateY(-1px);
+    }
+
+    .wishlist-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .wishlist-content {
+        padding: 0;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+/* Focus visible for keyboard navigation */
+.browse-btn:focus-visible {
+    outline: 2px solid #ff385c;
+    outline-offset: 2px;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .heart-icon,
+    .empty-state-wrapper,
+    .browse-btn {
+        animation: none;
+        transition: none;
+    }
+}

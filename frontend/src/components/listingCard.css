@@ -1,0 +1,51 @@
+.listingCard {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 16rem;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.card-img-top:hover {
+    opacity: 0.75;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-body>p {
+    margin: 0 !important;
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+.wishlist-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.wishlist-icon:hover {
+    color: red;
+}
+
+.wishlist-icon-solid {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    z-index: 100;
+}
