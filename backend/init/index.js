@@ -1,3 +1,6 @@
+if(process.env.NODE_ENV !== "production") {
+    require("dotenv").config({path : "../.env"});
+};
 const mongoose = require("mongoose");
 const initData = require("./data");
 const Listing = require("../models/listing");
@@ -11,7 +14,7 @@ main()
     });
 
 async  function main() {
-    mongoose.connect("mongodb://localhost:27017/Pwanderlust")
+    mongoose.connect(process.env.MONGO_URL);
 };
 
 const initDb = async() => {
