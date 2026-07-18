@@ -32,6 +32,10 @@ app.use(cors({
     credentials: true
 }));
 
+app.get("/" , (req , res) => {
+    res.json({ message : "Backend is running successfully"});
+})
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
