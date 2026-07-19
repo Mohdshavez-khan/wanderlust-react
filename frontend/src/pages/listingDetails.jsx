@@ -109,7 +109,7 @@ function ListingDetail() {
         return <h2>Loading...</h2>
     };
 
-    const imageUrl = listing.image?.url?.startsWith("http") ? listing.image.url : `http://localhost:8080/${listing.image.url.replace(/\\/g, "/")}`;
+    const imageUrl = listing.image?.url?.startsWith("http") ? listing.image.url : `${import.meta.env.VITE_API_URL}/${listing.image.url.replace(/\\/g, "/")}`;
 
     return (
         <div className="container-fluid container-md py-4 py-md-5">

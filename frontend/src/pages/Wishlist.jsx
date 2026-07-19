@@ -20,7 +20,7 @@ const Wishlist = () => {
     const fetchWishlist = async () => {
         setIsLoading(true);
         try {
-            const res = await api.get(import.meta.env.VITE_API_UR);
+            const res = await api.get(import.meta.env.VITE_API_URL + "/wishlist");
             setWishlist(res.data);
         } catch (err) {
             console.log(err);

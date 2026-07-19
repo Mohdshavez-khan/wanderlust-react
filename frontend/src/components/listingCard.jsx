@@ -15,7 +15,7 @@ function ListingCard({ listing, onRemove }) {
     const handleToggle = async (e) => {
         e.preventDefault();
         try {
-            let res = await axios.post(`http://localhost:8080/wishlist/${listing._id}`, {},
+            let res = await axios.post(`${import.meta.env.VITE_API_URL}/wishlist/${listing._id}`, {},
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -34,7 +34,7 @@ function ListingCard({ listing, onRemove }) {
     };
 
 
-    const imageUrl = listing.image?.url?.startsWith("http") ? listing.image.url : `http://localhost:8080/${listing.image.url.replace(/\\/g, "/")}`
+    const imageUrl = listing.image?.url?.startsWith("http") ? listing.image.url : `${import.meta.env.VITE_API_URL}/${listing.image.url.replace(/\\/g, "/")}`
 
 
     return (
