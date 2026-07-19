@@ -120,14 +120,14 @@ function ListingDetail() {
                         <div className="card-body p-3 p-sm-4 p-md-4">
                             <h2 className="h3 fw-bold mb-4">{listing.title}</h2>
                             <img src={imageUrl} alt={listing.title} className="w-100 rounded-8  listing-image" style={{ objectFit: 'cover' }} />
-                            <p className="mb-2"><strong>Owned by</strong> <i className="ms-2">{listing.owner.username}</i></p>
+                            <p className="mb-2"><strong>Owned by</strong> <i className="ms-2">{listing?.owner?.username}</i></p>
                             <h4 className="text-danger fw-bold mb-3">&#8377;{listing.price.toLocaleString('en-IN')}/night</h4>
                             <p className="mb-2"><strong>Description:</strong> {listing.description}</p>
                             <p className="mb-2"><strong>Location:</strong> {listing.location}</p>
                             <p className="mb-4"><strong>Country:</strong> {listing.country}</p>
                             <p className="mb-4"><strong>Category:</strong> {listing.category}</p>
 
-                            {currUser?.id === listing.owner._id && (
+                            {currUser?.id === listing?.owner?._id && (
                                 <div className="d-flex ms-0 flex-wrap mt-lg-2">
                                     <Link to={`/listings/${id}/edit`}><button className="btn btn-primary btn-sm">Edit</button></Link> &nbsp;&nbsp;&nbsp;&nbsp;
                                     <button onClick={handleDelete} className="btn btn-danger btn-sm">Delete</button>
@@ -185,7 +185,7 @@ function ListingDetail() {
                                     <div key={review._id} className="col-12 col-md-6">
                                         <div className="card border-1 shadow rounded-3 h-100">
                                             <div className="card-body p-3 p-md-4">
-                                                <h6 className="fw-bold mb-2">@{review.author.username}</h6>
+                                                <h6 className="fw-bold mb-2">@{review?.author?.username}</h6>
                                                 <div className="star-rating mb-1">
                                                     {[1, 2, 3, 4, 5].map((star) => (
                                                         <i
